@@ -1,0 +1,15 @@
+version,fecha,features,modelo,cv_media,cv_std,lb_publico
+base-mayoria,2026-07-08,-,DummyClassifier(most_frequent),0.6162,0.0023,
+base-genero,2026-07-08,IsFemale,ReglaGenero,0.7868,0.0188,0.7655
+v01-logistica,2026-07-08,16 (Fase 3),StandardScaler+LogisticRegression,0.8328,0.011,
+v02-rf-afinado,2026-07-08,16 (Fase 3),"RF(depth=8, leaf=4, feat=0.5)",0.8473,0.0092,0.76794
+v03-gb-afinado,2026-07-08,16 (Fase 3),"GB(lr=0.03, depth=4, n=100)",0.8563,0.0245,0.7488
+v04-voting,2026-07-08,16 (Fase 3),Voting soft (log+rf+gb+svm) - DESCARTADO,0.8417,0.0136,
+v05-logistica,2026-07-08,16 (Fase 3),StandardScaler+LogisticRegression,0.8328,0.011,0.76794
+v06-svm-fs,2026-07-08,16 + FamilySurvival,StandardScaler+SVC,0.8473,0.0154,0.79425
+v07-rf-fs,2026-07-08,16 + FamilySurvival,"RF(depth=8, leaf=4, feat=0.5)",0.8507,0.0137,0.78468
+v08-knn-fs,2026-07-08,16 + FamilySurvival,KNN(k=9) escalado,0.8451,0.0092,0.7799
+v09-gb-fs,2026-07-08,16 + FamilySurvival,"GB(lr=0.03, depth=4, n=100)",0.8563,0.0159,0.77511
+v10-svm-wc,2026-07-08,16 + FS + flags WC,StandardScaler+SVC,0.8507,0.0156,0.79186
+v11-hibrido,2026-07-08,16 + FS,SVM+FS con override WCG,0.8496,0.0177,0.79425
+v12-regla-wcg,2026-07-08,genero + grupos WC,Regla pura (sin ML) - GANADORA,0.8429,0.0182,0.80143

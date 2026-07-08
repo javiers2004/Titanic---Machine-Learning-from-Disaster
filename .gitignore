@@ -1,0 +1,23 @@
+# Datos de Kaggle: las reglas de la competición no permiten redistribuirlos.
+# Se descargan con: kaggle competitions download -c titanic -p data
+data/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# SO / editores
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# Credenciales (por si acaso — nunca deben entrar al repo)
+kaggle.json
